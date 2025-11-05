@@ -1,0 +1,63 @@
+name: smart_vision
+description: Voice Product Assistant for visually impaired users
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Camera & Image
+  camera: ^0.10.5+5
+  image_picker: ^1.0.4
+  
+  # ML Kit & Recognition (Enhanced with Latin Script)
+  google_mlkit_image_labeling: ^0.10.0
+  google_mlkit_text_recognition: ^0.11.0
+  google_mlkit_barcode_scanning: ^0.10.0
+  
+  # Tesseract OCR for high-accuracy text extraction
+  flutter_tesseract_ocr: ^0.4.30
+  
+  # Image processing
+  image: ^4.5.4
+  
+  # Google Generative AI (Gemini) for enhanced product recognition
+  google_generative_ai: ^0.4.7
+  
+  # Text-to-Speech
+  flutter_tts: ^3.8.3
+  
+  # Haptic Feedback
+  vibration: ^3.1.4
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
+  
+  # Firebase (Optional)
+  firebase_core: ^2.24.2
+  cloud_firestore: ^4.13.6
+  
+  # UI & Icons
+  cupertino_icons: ^1.0.6
+  
+  # Utilities
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  permission_handler: ^11.0.1
+  http: ^1.1.0
+  speech_to_text: ^7.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/data/

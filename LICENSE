@@ -1,0 +1,106 @@
+MIT License
+
+Copyright (c) 2025 SmartVision Development Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This application uses the following third-party packages:
+
+### Flutter SDK
+Copyright (c) Google LLC
+License: BSD 3-Clause License
+https://github.com/flutter/flutter/blob/master/LICENSE
+
+### Google ML Kit
+Copyright (c) Google LLC
+License: Apache License 2.0
+https://developers.google.com/ml-kit/terms
+
+### flutter_tts
+License: MIT License
+https://pub.dev/packages/flutter_tts/license
+
+### camera
+Copyright (c) Flutter Team
+License: BSD 3-Clause License
+https://pub.dev/packages/camera/license
+
+### image_picker
+Copyright (c) Flutter Team
+License: BSD 3-Clause License
+https://pub.dev/packages/image_picker/license
+
+### vibration
+License: MIT License
+https://pub.dev/packages/vibration/license
+
+### shared_preferences
+Copyright (c) Flutter Team
+License: BSD 3-Clause License
+https://pub.dev/packages/shared_preferences/license
+
+### path_provider
+Copyright (c) Flutter Team
+License: BSD 3-Clause License
+https://pub.dev/packages/path_provider/license
+
+### permission_handler
+License: MIT License
+https://pub.dev/packages/permission_handler/license
+
+All other dependencies maintain their respective licenses as specified in their packages.
+
+---
+
+## Attribution
+
+SmartVision - Voice Product Assistant for Visually Impaired Users
+
+This software was created to improve accessibility and independence for blind and visually impaired individuals.
+
+---
+
+## Usage
+
+You are free to:
+- Use this software for personal or commercial purposes
+- Modify the source code
+- Distribute copies
+- Create derivative works
+
+Under the conditions:
+- Include the copyright notice
+- Include the license text
+- Provide attribution
+
+---
+
+## Disclaimer
+
+This software is provided "as is" without warranty of any kind. The authors are not liable for any damages arising from the use of this software.
+
+---
+
+## Contact
+
+For questions about licensing, please refer to the README.md file in this repository.

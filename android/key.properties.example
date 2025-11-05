@@ -1,0 +1,8 @@
+# Copy this file to key.properties and replace placeholder values before building a release APK/AAB.
+# Do NOT commit key.properties to source control.
+#
+# Example:
+# storePassword=your_store_password
+# keyPassword=your_key_password
+# keyAlias=smartvision
+# storeFile=C:/Users/karthikeyan/smartvision-release-key.jks

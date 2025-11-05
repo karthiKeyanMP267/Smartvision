@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Dettol Handwash",
+      "description": "Antibacterial hand wash, 250ml",
+      "barcode": "8901396311522",
+      "category": "Personal Care"
+    },
+    {
+      "id": "2",
+      "name": "Colgate Toothpaste",
+      "description": "Total advanced health toothpaste, 150g",
+      "barcode": "8850006328026",
+      "category": "Personal Care"
+    },
+    {
+      "id": "3",
+      "name": "Coca Cola",
+      "description": "Soft drink, 500ml bottle",
+      "barcode": "5449000000996",
+      "category": "Beverages"
+    },
+    {
+      "id": "4",
+      "name": "Lays Chips",
+      "description": "Classic salted potato chips, 52g",
+      "barcode": "8901491101813",
+      "category": "Snacks"
+    },
+    {
+      "id": "5",
+      "name": "Nestle Maggi",
+      "description": "Instant noodles, masala flavor, 70g",
+      "barcode": "8901058847512",
+      "category": "Food"
+    }
+  ]
+}
