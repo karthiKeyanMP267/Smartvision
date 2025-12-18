@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../services/tts_service.dart';
+
 import '../services/haptic_service.dart';
+import '../services/tts_service.dart';
 import '../services/voice_command_service.dart';
-import 'scan_screen.dart';
 import 'recent_scans_screen.dart';
+import 'scan_screen.dart';
 import 'settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,6 +19,20 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   final HapticService _hapticService = HapticService();
   final VoiceCommandService _voiceService = VoiceCommandService();
   bool _isVoiceListening = false;
+
+  static const String _welcomeMessage =
+      'Welcome to SmartVision. Your voice product assistant. Tap the screen to hear instructions, or use the scan button to identify products.';
+
+  static const String _instructionsMessage =
+      'SmartVision helps you identify products. '
+      'Tap the yellow Scan Product button to take a photo. '
+      'Tap Recent Scans to hear your last scanned products. '
+      'Tap Settings to change voice speed or other options.';
+
+  static const String _listeningPrompt =
+      'Listening for commands. Say "help" for available commands.';
+
+  static const String _stoppedPrompt = 'Voice commands stopped';
 
   @override
   void initState() {
@@ -68,13 +83,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     
     if (_isVoiceListening) {
       await _voiceService.stopListening();
-      await _ttsService.speak('Voice commands stopped');
+      await _ttsService.speak(_stoppedPrompt);
       setState(() {
         _isVoiceListening = false;
       });
     } else {
       await _voiceService.startListening();
-      await _ttsService.speak('Listening for commands. Say "help" for available commands.');
+      await _ttsService.speak(_listeningPrompt);
       setState(() {
         _isVoiceListening = true;
       });
@@ -83,19 +98,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   Future<void> _welcomeUser() async {
     await Future.delayed(const Duration(milliseconds: 500));
-    await _ttsService.speak(
-      'Welcome to SmartVision. Your voice product assistant. Tap the screen to hear instructions, or use the scan button to identify products.'
-    );
+    await _ttsService.speak(_welcomeMessage);
   }
 
   Future<void> _handleScreenTap() async {
     await _hapticService.lightImpact();
-    await _ttsService.speak(
-      'SmartVision helps you identify products. '
-      'Tap the yellow Scan Product button to take a photo. '
-      'Tap Recent Scans to hear your last scanned products. '
-      'Tap Settings to change voice speed or other options.'
-    );
+    await _ttsService.speak(_instructionsMessage);
   }
 
   Future<void> _navigateToScan() async {
@@ -103,9 +111,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     await _ttsService.speak('Opening camera for product scan');
     
     if (!mounted) return;
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const ScanScreen()),
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const ScanScreen()),
     );
   }
 
@@ -114,9 +121,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     await _ttsService.speak('Opening recent scans');
     
     if (!mounted) return;
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const RecentScansScreen()),
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const RecentScansScreen()),
     );
   }
 
@@ -125,9 +131,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     await _ttsService.speak('Opening settings');
     
     if (!mounted) return;
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const SettingsScreen()),
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const SettingsScreen()),
     );
   }
 
